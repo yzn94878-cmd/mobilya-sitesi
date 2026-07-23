@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ürün Detayı</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<a href="index.html">
+    <img src="images/logo.png6" class="logo">
+</a>
+
+
+<div class="product-detail">
+
+    <img id="urunResim" src="" alt="Ürün">
+
+    <h2 id="urunAd"></h2>
+
+    <p id="urunFiyat"></p>
+
+    <p>
+        Modern tasarımı ve kaliteli yapısıyla evinize şıklık katar.
+    </p>
+
+    <p>
+        <b>Stok Durumu:</b>
+        <span style="color:green;">Stokta Var ✔</span>
+    </p>
+
+    <label><b>Adet:</b></label>
+    <br>
+    <input type="number" value="1" min="1">
+
+    <br><br>
+
+    <label><b>Renk:</b></label>
+
+    <select>
+        <option>Beyaz</option>
+        <option>Siyah</option>
+        <option>Ceviz</option>
+        <option>Meşe</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="window.location.href='sepet.html'">
+        Sepete Ekle
+    </button>
+
+    <br><br>
+
+    <button onclick="history.back()">
+        Geri
+    </button>
+
+</div>
+
+
+<script>
+
+let params = new URLSearchParams(window.location.search);
+let urun = params.get("urun");
+
+
+
+let urunler = {
+
+1:{
+resim:"images/yatak.png",
+ad:"Modern Yatak Odası",
+fiyat:"₺35.000"
+},
+
+2:{
+resim:"images/yatak.png1.jpg",
+ad:"Klasik Yatak Odası",
+fiyat:"₺40.000"
+},
+
+3:{
+resim:"images/yatak.png2.jpg",
+ad:"Lüks Yatak Odası",
+fiyat:"₺55.000"
+},
+
+4:{
+resim:"images/yatak.png3.jpg",
+ad:"Lüks Yatak Odası",
+fiyat:"₺55.000"
+},
+
+5:{
+resim:"images/yatak.png4.jpg",
+ad:"Lüks Yatak Odası",
+fiyat:"₺55.000"
+},
+
+10:{
+resim:"images/masa.png2.jpg",
+ad:"Modern Yemek Masası",
+fiyat:"₺12.500"
+},
+
+11:{
+resim:"images/masa.png3.jpg",
+ad:"Ahşap Yemek Masası",
+fiyat:"₺10.500"
+},
+
+12:{
+resim:"images/masa.png4.jpg",
+ad:"Klasik Yemek Masası",
+fiyat:"₺9.500"
+},
+
+13:{
+resim:"images/masa.png6.jpg",
+ad:"Lüks Yemek Masası",
+fiyat:"₺15.500"
+},
+
+14:{
+resim:"images/masa.png10.jpg",
+ad:"Klasik Yemek Masası",
+fiyat:"₺16.499"
+},
+
+15:{
+resim:"images/masa.png11.jpg",
+ad:"Klasik Yemek Masası",
+fiyat:"₺16.499"
+},
+
+16:{
+resim:"images/masa.png12.jpg",
+ad:"Klasik Yemek Masası",
+fiyat:"₺22.499"
+},
+
+17:{
+resim:"images/masa.png13.jpg",
+ad:"Klasik Yemek Masası",
+fiyat:"₺20.499"
+},
+
+18:{
+resim:"images/masa.png14.jpg",
+ad:"Klasik Yemek Masası",
+fiyat:"₺27.499"
+},
+
+19:{
+resim:"images/masa.png15.jpg",
+ad:"Klasik Yemek Masası",
+fiyat:"₺15.499"
+},
+
+20:{
+resim:"images/masa.png16.jpg",
+ad:"Klasik Yemek Masası",
+fiyat:"₺20.499"
+},
+
+21:{
+resim:"images/masa.png17.jpg",
+ad:"Klasik Yemek Masası",
+fiyat:"₺20.499"
+},
+
+30:{
+resim:"images/balkon.png1.jpg",
+ad:"Rattan Balkon Seti",
+fiyat:"₺16.499"
+},
+
+31:{
+resim:"images/balkon.png2.jpg",
+ad:"Modern Balkon Seti",
+fiyat:"₺14.499"
+},
+
+32:{
+resim:"images/balkon.png3.jpg",
+ad:"Ahşap Balkon Seti",
+fiyat:"₺20.499"
+},
+
+33:{
+resim:"images/balkon.png4.jpg",
+ad:"Ahşap Balkon Seti",
+fiyat:"₺20.499"
+},
+
+34:{
+resim:"images/balkon.png5.jpg",
+ad:"Ahşap Balkon Seti",
+fiyat:"₺11.499"
+},
+
+35:{
+resim:"images/balkon.png6.jpg",
+ad:"Ahşap Balkon Seti",
+fiyat:"₺24.499"
+},
+
+36:{
+resim:"images/balkon.png7.jpg",
+ad:"Ahşap Balkon Seti",
+fiyat:"₺20.499"
+},
+
+37:{
+resim:"images/balkon.png8.jpg",
+ad:"Ahşap Balkon Seti",
+fiyat:"₺16.499"
+},
+
+38:{
+resim:"images/balkon.png10.jpg",
+ad:"Lüks Balkon Seti",
+fiyat:"₺16.500"
+}
+};
+
+if(urunler[urun]){
+
+document.getElementById("urunResim").src = urunler[urun].resim;
+
+document.getElementById("urunAd").innerHTML = urunler[urun].ad;
+
+document.getElementById("urunFiyat").innerHTML = urunler[urun].fiyat;
+
+}
+
+</script>
+
+
+</body>
+</html>
